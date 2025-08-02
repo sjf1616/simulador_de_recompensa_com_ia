@@ -1,6 +1,7 @@
 import json
 import os
 import random
+import csv
 
 class AgenteSimulador():
     def __init__(self):
@@ -16,9 +17,9 @@ class AgenteSimulador():
 
     def escolher_acao(self):  
         acoes_disponiveis = list(self.memoria.keys())
-        acao_escolhida = random.choice(acoes_disponiveis)
-        self.historico.append(acao_escolhida)
-        return acao_escolhida
+        self.acao_escolhida = random.choice(acoes_disponiveis)
+        self.historico.append(self.acao_escolhida)
+        return self.acao_escolhida
 
     def registrar_recompensa(self, acao, recompensa_real):
         dados = self.memoria[acao]
@@ -38,6 +39,7 @@ class AgenteSimulador():
         self.dopamina = round(self.dopamina, 2)
 
         self.salvar_memoria()
+        self.register_logs(recompensa_real, self.dopamina, acao)
 
     def salvar_memoria(self):
         with open(self.arquivo_json, 'w') as f:
@@ -54,3 +56,9 @@ class AgenteSimulador():
                 
         with open(self.arquivo_json, 'w') as f:
             json.dump(k, f, indent=4)
+
+    def register_logs(self, recompensa_real, dopamina, acao):
+        fieldname = ['dopamina', 'acao', 'recompensa_real']
+        with open('data/dataset.csv', 'a', newline='', encoding='utf-8') as f:
+            dataset = csv.DictWriter(f, fieldnames=fieldname)
+            dataset.writerow({'dopamina':dopamina, 'acao': acao, 'recompensa_real':recompensa_real})
