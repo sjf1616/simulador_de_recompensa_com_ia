@@ -8,7 +8,7 @@ import pandas as pd
 def choice_action():
     agente = AgenteSimulador()
 
-    for _ in range(0, 20):
+    for _ in range(0, 1000):
         acao = agente.escolher_acao()
         recompensa = random.randint(0, 10)
         agente.registrar_recompensa(acao, recompensa)

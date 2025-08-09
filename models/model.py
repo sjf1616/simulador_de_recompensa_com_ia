@@ -53,6 +53,11 @@ class AgenteSimulador():
                 k[a]['vezes'] = 0
                 k[a]['soma_recompensa'] = 0
                 k[a]['media_recompensa'] = 0
+
+        with open("data/dataset.csv", 'w', newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerow(["dopamina", "acao", "recompensa_real"])
+
                 
         with open(self.arquivo_json, 'w') as f:
             json.dump(k, f, indent=4)
