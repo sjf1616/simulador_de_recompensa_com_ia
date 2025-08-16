@@ -1,32 +1,32 @@
 {
     "Estudar": {
-        "vezes": 0,
-        "soma_recompensa": 0,
-        "media_recompensa": 0,
+        "vezes": 174,
+        "soma_recompensa": 847,
+        "media_recompensa": 4.867816091954023,
         "esforco": "Alto"
     },
     "Jogar": {
-        "vezes": 0,
-        "soma_recompensa": 0,
-        "media_recompensa": 0,
+        "vezes": 199,
+        "soma_recompensa": 996,
+        "media_recompensa": 5.005025125628141,
         "esforco": "Baixo"
     },
     "Tiktok": {
-        "vezes": 0,
-        "soma_recompensa": 0,
-        "media_recompensa": 0,
+        "vezes": 212,
+        "soma_recompensa": 1032,
+        "media_recompensa": 4.867924528301887,
         "esforco": "Baixo"
     },
     "Ler": {
-        "vezes": 0,
-        "soma_recompensa": 0,
-        "media_recompensa": 0,
+        "vezes": 221,
+        "soma_recompensa": 1117,
+        "media_recompensa": 5.0542986425339365,
         "esforco": "Alto"
     },
     "Musica": {
-        "vezes": 0,
-        "soma_recompensa": 0,
-        "media_recompensa": 0,
+        "vezes": 194,
+        "soma_recompensa": 963,
+        "media_recompensa": 4.963917525773196,
         "esforco": "Alto"
     }
 }
